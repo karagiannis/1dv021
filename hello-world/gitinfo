@@ -1,0 +1,93 @@
+Lasse@LAPTOP-32JEE0RF MINGW64 ~
+$ cd 1dv021/
+
+//Klona repositoriet
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021
+$ git clone https://github.com/karagiannis/1dv021.git
+Cloning into '1dv021'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021
+$ cd 1dv021/
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ git pull
+Already up to date.
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ git pull https://github.com/1dv021/boilerplate-gitignore.git
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/1dv021/boilerplate-gitignore
+ * branch            HEAD       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ git push
+Everything up-to-date
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ git remote -v
+origin  https://github.com/karagiannis/1dv021.git (fetch)
+origin  https://github.com/karagiannis/1dv021.git (push)
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ touch test.txt
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ git push
+Everything up-to-date
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ git push .
+Everything up-to-date
+
+//Addera kod från ett rep.
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ git remote add hello-world https://github.com/1dv021/exercise-hello-world.git
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ git subtree add --prefix=hello-world --squash hello-world master
+git fetch hello-world master
+warning: no common commits
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 22 (delta 3), reused 2 (delta 2), pack-reused 17
+Unpacking objects: 100% (22/22), done.
+From https://github.com/1dv021/exercise-hello-world
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> hello-world/master
+Added dir 'hello-world'
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ ls
+hello-world/  README.md  test.txt
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021 (master)
+$ cd hello-world/
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021/hello-world (master)
+$ git push
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (11/11), 3.73 KiB | 1.24 MiB/s, done.
+Total 11 (delta 0), reused 0 (delta 0)
+To https://github.com/karagiannis/1dv021.git
+   1a58b1c..1050860  master -> master
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021/hello-world (master)
+$ ^C
+
+Lasse@LAPTOP-32JEE0RF MINGW64 ~/1dv021/1dv021/hello-world (master)
+$
